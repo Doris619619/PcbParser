@@ -1,0 +1,1239 @@
+=== 总节点数: 404 ===
+=== 顶层根节点个数: 1 ===
+
+----- 根 1 -----
+节点名称: kicad_pcb
+  子节点:
+  节点名称: version
+    参数: "20221018"
+  节点名称: generator
+    参数: "pcbnew"
+  节点名称: general
+    子节点:
+    节点名称: thickness
+      参数: "1.6"
+  节点名称: paper
+    参数: "A4"
+  节点名称: layers
+    子节点:
+    节点名称: 0
+      参数: "F.Cu" "signal" "Top"
+    节点名称: 31
+      参数: "B.Cu" "signal" "Bottom"
+    节点名称: 32
+      参数: "B.Adhes" "user" "B.Adhesive"
+    节点名称: 33
+      参数: "F.Adhes" "user" "F.Adhesive"
+    节点名称: 34
+      参数: "B.Paste" "user"
+    节点名称: 35
+      参数: "F.Paste" "user"
+    节点名称: 36
+      参数: "B.SilkS" "user" "B.Silkscreen"
+    节点名称: 37
+      参数: "F.SilkS" "user" "F.Silkscreen"
+    节点名称: 38
+      参数: "B.Mask" "user"
+    节点名称: 39
+      参数: "F.Mask" "user"
+    节点名称: 40
+      参数: "Dwgs.User" "user" "User.Drawings"
+    节点名称: 41
+      参数: "Cmts.User" "user" "User.Comments"
+    节点名称: 42
+      参数: "Eco1.User" "user" "User.Eco1"
+    节点名称: 43
+      参数: "Eco2.User" "user" "User.Eco2"
+    节点名称: 44
+      参数: "Edge.Cuts" "user"
+    节点名称: 45
+      参数: "Margin" "user"
+    节点名称: 46
+      参数: "B.CrtYd" "user" "B.Courtyard"
+    节点名称: 47
+      参数: "F.CrtYd" "user" "F.Courtyard"
+    节点名称: 48
+      参数: "B.Fab" "user"
+    节点名称: 49
+      参数: "F.Fab" "user"
+    节点名称: 50
+      参数: "User.1" "user"
+    节点名称: 51
+      参数: "User.2" "user"
+    节点名称: 52
+      参数: "User.3" "user"
+    节点名称: 53
+      参数: "User.4" "user"
+    节点名称: 54
+      参数: "User.5" "user"
+    节点名称: 55
+      参数: "User.6" "user"
+    节点名称: 56
+      参数: "User.7" "user"
+    节点名称: 57
+      参数: "User.8" "user"
+    节点名称: 58
+      参数: "User.9" "user"
+  节点名称: setup
+    子节点:
+    节点名称: pad_to_mask_clearance
+      参数: "0.1016"
+    节点名称: aux_axis_origin
+      参数: "-120.62617" "153.22756"
+    节点名称: grid_origin
+      参数: "-120.62617" "153.22756"
+    节点名称: pcbplotparams
+      子节点:
+      节点名称: layerselection
+        参数: "0x00010fc_ffffffff"
+      节点名称: plot_on_all_layers_selection
+        参数: "0x0000000_00000000"
+      节点名称: disableapertmacros
+        参数: "false"
+      节点名称: usegerberextensions
+        参数: "false"
+      节点名称: usegerberattributes
+        参数: "true"
+      节点名称: usegerberadvancedattributes
+        参数: "true"
+      节点名称: creategerberjobfile
+        参数: "true"
+      节点名称: dashed_line_dash_ratio
+        参数: "12.000000"
+      节点名称: dashed_line_gap_ratio
+        参数: "3.000000"
+      节点名称: svgprecision
+        参数: "4"
+      节点名称: plotframeref
+        参数: "false"
+      节点名称: viasonmask
+        参数: "false"
+      节点名称: mode
+        参数: "1"
+      节点名称: useauxorigin
+        参数: "false"
+      节点名称: hpglpennumber
+        参数: "1"
+      节点名称: hpglpenspeed
+        参数: "20"
+      节点名称: hpglpendiameter
+        参数: "15.000000"
+      节点名称: dxfpolygonmode
+        参数: "true"
+      节点名称: dxfimperialunits
+        参数: "true"
+      节点名称: dxfusepcbnewfont
+        参数: "true"
+      节点名称: psnegative
+        参数: "false"
+      节点名称: psa4output
+        参数: "false"
+      节点名称: plotreference
+        参数: "true"
+      节点名称: plotvalue
+        参数: "true"
+      节点名称: plotinvisibletext
+        参数: "false"
+      节点名称: sketchpadsonfab
+        参数: "false"
+      节点名称: subtractmaskfromsilk
+        参数: "false"
+      节点名称: outputformat
+        参数: "1"
+      节点名称: mirror
+        参数: "false"
+      节点名称: drillshape
+        参数: "1"
+      节点名称: scaleselection
+        参数: "1"
+      节点名称: outputdirectory
+  节点名称: net
+    参数: "0"
+  节点名称: net
+    参数: "1" "VIN"
+  节点名称: net
+    参数: "2" "VCC_5V"
+  节点名称: net
+    参数: "3" "GND"
+  节点名称: net
+    参数: "4" "Net-(U1-P2.1{slash}TK_CAP)"
+  节点名称: net
+    参数: "5" "Net-(C4-Pad2)"
+  节点名称: net
+    参数: "6" "/ALS_ori"
+  节点名称: net
+    参数: "7" "Net-(D16-A)"
+  节点名称: net
+    参数: "8" "Net-(D18-A)"
+  节点名称: net
+    参数: "9" "Net-(U4-Vin)"
+  节点名称: net
+    参数: "10" "/W-"
+  节点名称: net
+    参数: "11" "/Y-"
+  节点名称: net
+    参数: "12" "Net-(C15-Pad2)"
+  节点名称: net
+    参数: "13" "Net-(C16-Pad2)"
+  节点名称: net
+    参数: "14" "Net-(C22-Pad2)"
+  节点名称: net
+    参数: "15" "Net-(C23-Pad2)"
+  节点名称: net
+    参数: "16" "Net-(D1-PadA)"
+  节点名称: net
+    参数: "17" "/V1"
+  节点名称: net
+    参数: "18" "Net-(D2-PadA)"
+  节点名称: net
+    参数: "19" "Net-(D3-PadA)"
+  节点名称: net
+    参数: "20" "Net-(D4-PadA)"
+  节点名称: net
+    参数: "21" "Net-(D5-PadA)"
+  节点名称: net
+    参数: "22" "/V2"
+  节点名称: net
+    参数: "23" "Net-(D6-PadA)"
+  节点名称: net
+    参数: "24" "Net-(D7-PadA)"
+  节点名称: net
+    参数: "25" "Net-(D8-PadA)"
+  节点名称: net
+    参数: "26" "Net-(D9-PadA)"
+  节点名称: net
+    参数: "27" "/V3"
+  节点名称: net
+    参数: "28" "Net-(D12-PadA)"
+  节点名称: net
+    参数: "29" "Net-(D13-PadA)"
+  节点名称: net
+    参数: "30" "/V4"
+  节点名称: net
+    参数: "31" "Net-(D14-PadA)"
+  节点名称: net
+    参数: "32" "Net-(D15-PadA)"
+  节点名称: net
+    参数: "33" "/PWM_W"
+  节点名称: net
+    参数: "34" "/PWM_Y"
+  节点名称: net
+    参数: "35" "/H1"
+  节点名称: net
+    参数: "36" "/H2"
+  节点名称: net
+    参数: "37" "/H3"
+  节点名称: net
+    参数: "38" "/H4"
+  节点名称: net
+    参数: "39" "/TK1"
+  节点名称: net
+    参数: "40" "/TK2"
+  节点名称: net
+    参数: "41" "/TK6"
+  节点名称: net
+    参数: "42" "/TKP6"
+  节点名称: net
+    参数: "43" "/TKP3"
+  节点名称: net
+    参数: "44" "/TK3"
+  节点名称: net
+    参数: "45" "/TKP4"
+  节点名称: net
+    参数: "46" "/TK4"
+  节点名称: net
+    参数: "47" "/TKP5"
+  节点名称: net
+    参数: "48" "/TK5"
+  节点名称: net
+    参数: "49" "/W+"
+  节点名称: net
+    参数: "50" "/Y+"
+  节点名称: net
+    参数: "51" "/S_TK1"
+  节点名称: net
+    参数: "52" "/S_TKP1"
+  节点名称: net
+    参数: "53" "/S_TK2"
+  节点名称: net
+    参数: "54" "/S_TKP2"
+  节点名称: net
+    参数: "55" "/S_TK3"
+  节点名称: net
+    参数: "56" "/S_TKP3"
+  节点名称: net
+    参数: "57" "/S_TK4"
+  节点名称: net
+    参数: "58" "/S_TKP4"
+  节点名称: net
+    参数: "59" "/S_TK5"
+  节点名称: net
+    参数: "60" "/S_TKP5"
+  节点名称: net
+    参数: "61" "/S_TK6"
+  节点名称: net
+    参数: "62" "/S_TKP6"
+  节点名称: net
+    参数: "63" "Net-(U3-DIM)"
+  节点名称: net
+    参数: "64" "Net-(U2-DIM)"
+  节点名称: net
+    参数: "65" "/RX"
+  节点名称: net
+    参数: "66" "unconnected-(U1-P2{slash}RESET-Pad2)"
+  节点名称: footprint
+    参数: "[[FPID:1]]" "KiCADLibrary:0603_C"
+    子节点:
+    节点名称: layer
+      参数: "F.Cu"
+    节点名称: tstamp
+      参数: "0211ef97-a709-42a7-9b58-990659a625cb"
+    节点名称: at
+      参数: "116.7349" "93.673"
+    节点名称: attr
+      参数: "through_hole"
+    节点名称: fp_text
+      参数: "reference" "C5"
+      子节点:
+      节点名称: at
+        参数: "-2.335" "0"
+      节点名称: layer
+        参数: "F.SilkS"
+      节点名称: effects
+        子节点:
+        节点名称: font
+          子节点:
+          节点名称: size
+            参数: "0.48" "0.48"
+          节点名称: thickness
+            参数: "0.127"
+        节点名称: justify
+          参数: "top"
+      节点名称: tstamp
+        参数: "8b2ec083-3873-4d27-b948-8aaf7f50af53"
+    节点名称: fp_text
+      参数: "value" "1uF/10V/0603" "hide"
+      子节点:
+      节点名称: at
+        参数: "-2.335" "0"
+      节点名称: layer
+        参数: "F.SilkS"
+      节点名称: effects
+        子节点:
+        节点名称: font
+          子节点:
+          节点名称: size
+            参数: "0.48" "0.48"
+          节点名称: thickness
+            参数: "0.127"
+        节点名称: justify
+          参数: "top"
+      节点名称: tstamp
+        参数: "36cfd765-a5a3-4e57-8fda-ee46a839e5c7"
+    节点名称: fp_line
+      子节点:
+      节点名称: start
+        参数: "-1.535" "0.39"
+      节点名称: end
+        参数: "-1.535" "-0.39"
+      节点名称: stroke
+        子节点:
+        节点名称: width
+          参数: "0.2"
+        节点名称: type
+          参数: "solid"
+      节点名称: layer
+        参数: "F.SilkS"
+      节点名称: tstamp
+        参数: "ce00ea4b-4169-4cf9-aaf2-552bde95429c"
+    节点名称: fp_line
+      子节点:
+      节点名称: start
+        参数: "-1.135" "-0.79"
+      节点名称: end
+        参数: "-0.4" "-0.79"
+      节点名称: stroke
+        子节点:
+        节点名称: width
+          参数: "0.2"
+        节点名称: type
+          参数: "solid"
+      节点名称: layer
+        参数: "F.SilkS"
+      节点名称: tstamp
+        参数: "ec0ec6cb-ded1-4fe4-a437-7b6be6c8d2c9"
+    节点名称: fp_line
+      子节点:
+      节点名称: start
+        参数: "-1.135" "0.79"
+      节点名称: end
+        参数: "-0.4" "0.79"
+      节点名称: stroke
+        子节点:
+        节点名称: width
+          参数: "0.2"
+        节点名称: type
+          参数: "solid"
+      节点名称: layer
+        参数: "F.SilkS"
+      节点名称: tstamp
+        参数: "a955ae88-f5d6-4525-9eef-1237ca310cd9"
+    节点名称: fp_line
+      子节点:
+      节点名称: start
+        参数: "0.4" "-0.79"
+      节点名称: end
+        参数: "1.135" "-0.79"
+      节点名称: stroke
+        子节点:
+        节点名称: width
+          参数: "0.2"
+        节点名称: type
+          参数: "solid"
+      节点名称: layer
+        参数: "F.SilkS"
+      节点名称: tstamp
+        参数: "724b2273-408e-490f-9575-df4bbd1988ba"
+    节点名称: fp_line
+      子节点:
+      节点名称: start
+        参数: "0.4" "0.79"
+      节点名称: end
+        参数: "1.135" "0.79"
+      节点名称: stroke
+        子节点:
+        节点名称: width
+          参数: "0.2"
+        节点名称: type
+          参数: "solid"
+      节点名称: layer
+        参数: "F.SilkS"
+      节点名称: tstamp
+        参数: "1cc4d071-950a-4d65-95c9-c4ad9442cf0d"
+    节点名称: fp_line
+      子节点:
+      节点名称: start
+        参数: "1.535" "0.39"
+      节点名称: end
+        参数: "1.535" "-0.39"
+      节点名称: stroke
+        子节点:
+        节点名称: width
+          参数: "0.2"
+        节点名称: type
+          参数: "solid"
+      节点名称: layer
+        参数: "F.SilkS"
+      节点名称: tstamp
+        参数: "ed931631-b2dc-4f2e-bbca-0e46e34313cd"
+    节点名称: pad
+      参数: "1" "smd" "rect"
+      子节点:
+      节点名称: at
+        参数: "-0.77" "0"
+      节点名称: size
+        参数: "0.93" "0.98"
+      节点名称: layers
+        参数: "F.Cu" "F.Paste" "F.Mask"
+      节点名称: net
+        参数: "3" "GND"
+      节点名称: tstamp
+        参数: "34624bbe-cf49-493d-bdaa-27dbc8832fab"
+    节点名称: pad
+      参数: "2" "smd" "rect"
+      子节点:
+      节点名称: at
+        参数: "0.77" "0"
+      节点名称: size
+        参数: "0.93" "0.98"
+      节点名称: layers
+        参数: "F.Cu" "F.Paste" "F.Mask"
+      节点名称: net
+        参数: "6" "/ALS_ori"
+      节点名称: tstamp
+        参数: "f7d667b1-9a64-42c8-9f74-e0f23d9dd9c9"
+  节点名称: footprint
+    参数: "[[FPID:2]]" "KiCADLibrary:TK_13mm"
+    子节点:
+    节点名称: layer
+      参数: "B.Cu"
+    节点名称: tstamp
+      参数: "f31bc8d4-d21a-4ca0-b961-cf18860afd26"
+    节点名称: at
+      参数: "165.715" "109.527"
+    节点名称: attr
+      参数: "through_hole"
+    节点名称: fp_text
+      参数: "reference" "TK6"
+      子节点:
+      节点名称: at
+        参数: "-7.347" "0"
+      节点名称: layer
+        参数: "B.SilkS"
+      节点名称: effects
+        子节点:
+        节点名称: font
+          子节点:
+          节点名称: size
+            参数: "0.48" "0.48"
+          节点名称: thickness
+            参数: "0.127"
+        节点名称: justify
+          参数: "top" "mirror"
+      节点名称: tstamp
+        参数: "67b2c4a2-5f44-4ae6-a240-0cae20fefbe1"
+    节点名称: fp_text
+      参数: "value" "~" "hide"
+      子节点:
+      节点名称: at
+        参数: "-7.347" "0"
+      节点名称: layer
+        参数: "B.Fab"
+      节点名称: effects
+        子节点:
+        节点名称: font
+          子节点:
+          节点名称: size
+            参数: "0.48" "0.48"
+          节点名称: thickness
+            参数: "0.127"
+        节点名称: justify
+          参数: "top" "mirror"
+      节点名称: tstamp
+        参数: "6d54d72c-34f9-4315-b28b-b479faf0d0e9"
+    节点名称: fp_text
+      参数: "user" "${REFERENCE}"
+      子节点:
+      节点名称: at
+        参数: "-7.347" "0"
+      节点名称: layer
+        参数: "B.Fab"
+      节点名称: effects
+        子节点:
+        节点名称: font
+          子节点:
+          节点名称: size
+            参数: "0.48" "0.48"
+          节点名称: thickness
+            参数: "0.127"
+        节点名称: justify
+          参数: "top" "mirror"
+      节点名称: tstamp
+        参数: "66b6743d-decf-4e04-af3e-003ba885c535"
+    节点名称: fp_line
+      子节点:
+      节点名称: start
+        参数: "-3.7" "-3.85"
+      节点名称: end
+        参数: "-3.7" "3.65"
+      节点名称: stroke
+        子节点:
+        节点名称: width
+          参数: "0.05"
+        节点名称: type
+          参数: "solid"
+      节点名称: layer
+        参数: "Edge.Cuts"
+      节点名称: tstamp
+        参数: "a0b455fe-83d3-4011-bc3d-59e55fd40e0f"
+    节点名称: fp_line
+      子节点:
+      节点名称: start
+        参数: "-3.7" "3.65"
+      节点名称: end
+        参数: "3.8" "3.65"
+      节点名称: stroke
+        子节点:
+        节点名称: width
+          参数: "0.05"
+        节点名称: type
+          参数: "solid"
+      节点名称: layer
+        参数: "Edge.Cuts"
+      节点名称: tstamp
+        参数: "4b5f8ec0-f5c6-4379-814c-a9b20dfa2bed"
+    节点名称: fp_line
+      子节点:
+      节点名称: start
+        参数: "3.8" "-3.85"
+      节点名称: end
+        参数: "-3.7" "-3.85"
+      节点名称: stroke
+        子节点:
+        节点名称: width
+          参数: "0.05"
+        节点名称: type
+          参数: "solid"
+      节点名称: layer
+        参数: "Edge.Cuts"
+      节点名称: tstamp
+        参数: "af0c36c8-614a-4b35-9a73-0c7d7d0ce417"
+    节点名称: fp_line
+      子节点:
+      节点名称: start
+        参数: "3.8" "3.65"
+      节点名称: end
+        参数: "3.8" "-3.85"
+      节点名称: stroke
+        子节点:
+        节点名称: width
+          参数: "0.05"
+        节点名称: type
+          参数: "solid"
+      节点名称: layer
+        参数: "Edge.Cuts"
+      节点名称: tstamp
+        参数: "e331b55e-6b72-4b55-8a9e-e6827815a692"
+    节点名称: pad
+      参数: "1" "smd" "circle"
+      子节点:
+      节点名称: at
+        参数: "0" "0" "180"
+      节点名称: size
+        参数: "13.094" "13.094"
+      节点名称: layers
+        参数: "B.Cu"
+      节点名称: net
+        参数: "42" "/TKP6"
+      节点名称: tstamp
+        参数: "3440cbe9-eb68-4f38-8414-cad59c46d7b9"
+  节点名称: gr_line
+    子节点:
+    节点名称: start
+      参数: "81.5011" "138.004"
+    节点名称: end
+      参数: "81.5011" "72.0036"
+    节点名称: stroke
+      子节点:
+      节点名称: width
+        参数: "0.05"
+      节点名称: type
+        参数: "solid"
+    节点名称: layer
+      参数: "Edge.Cuts"
+    节点名称: tstamp
+      参数: "2da4ae97-e04e-43db-96b8-d8c0eaeb7c31"
+  节点名称: gr_line
+    子节点:
+    节点名称: start
+      参数: "215.501" "72.0036"
+    节点名称: end
+      参数: "215.501" "138.004"
+    节点名称: stroke
+      子节点:
+      节点名称: width
+        参数: "0.05"
+      节点名称: type
+        参数: "solid"
+    节点名称: layer
+      参数: "Edge.Cuts"
+    节点名称: tstamp
+      参数: "7800b632-1be5-4bce-bcfd-2c1c68aa17a3"
+  节点名称: gr_line
+    子节点:
+    节点名称: start
+      参数: "81.5011" "72.0036"
+    节点名称: end
+      参数: "215.501" "72.0036"
+    节点名称: stroke
+      子节点:
+      节点名称: width
+        参数: "0.05"
+      节点名称: type
+        参数: "solid"
+    节点名称: layer
+      参数: "Edge.Cuts"
+    节点名称: tstamp
+      参数: "a78cc708-43a6-4b29-818d-549faa9b6ce8"
+  节点名称: gr_line
+    子节点:
+    节点名称: start
+      参数: "215.501" "138.004"
+    节点名称: end
+      参数: "81.5011" "138.004"
+    节点名称: stroke
+      子节点:
+      节点名称: width
+        参数: "0.05"
+      节点名称: type
+        参数: "solid"
+    节点名称: layer
+      参数: "Edge.Cuts"
+    节点名称: tstamp
+      参数: "bd4cccce-e0a2-4e20-9d68-edcd1b44294f"
+  节点名称: gr_text
+    参数: "2025/09/17 12:44    KICAD version: 5.0.0"
+    子节点:
+    节点名称: at
+      参数: "81.5011" "72.0036"
+    节点名称: layer
+      参数: "Edge.Cuts"
+    节点名称: tstamp
+      参数: "7b29b607-1393-407f-ba71-59a1364c95dd"
+    节点名称: effects
+      子节点:
+      节点名称: font
+        参数: "bold"
+        子节点:
+        节点名称: size
+          参数: "1.5" "1.5"
+        节点名称: thickness
+          参数: "0.3"
+      节点名称: justify
+        参数: "left" "bottom"
+  节点名称: segment
+    参数: "[[SEID:1]]"
+    子节点:
+    节点名称: start
+      参数: "134.926102" "77.028601"
+    节点名称: end
+      参数: "136.626102" "75.328601"
+    节点名称: width
+      参数: "1"
+    节点名称: layer
+      参数: "F.Cu"
+    节点名称: net
+      参数: "1"
+    节点名称: tstamp
+      参数: "00ad959f-55e2-4c68-9cbf-eec0eb488d9d"
+  节点名称: segment
+    参数: "[[SEID:2]]"
+    子节点:
+    节点名称: start
+      参数: "128.326102" "74.328601"
+    节点名称: end
+      参数: "128.426102" "74.228601"
+    节点名称: width
+      参数: "1"
+    节点名称: layer
+      参数: "F.Cu"
+    节点名称: net
+      参数: "1"
+    节点名称: tstamp
+      参数: "0288cb92-b1b0-406f-9877-09366e75001a"
+  节点名称: segment
+    参数: "[[SEID:3]]"
+    子节点:
+    节点名称: start
+      参数: "156.426102" "75.728601"
+    节点名称: end
+      参数: "156.426102" "78.128601"
+    节点名称: width
+      参数: "1"
+    节点名称: layer
+      参数: "F.Cu"
+    节点名称: net
+      参数: "1"
+    节点名称: tstamp
+      参数: "073dff1f-f089-447c-a317-fc8d571a8d11"
+  节点名称: via
+    参数: "[[VIID:1]]"
+    子节点:
+    节点名称: at
+      参数: "166.526102" "98.728601"
+    节点名称: size
+      参数: "0.4"
+    节点名称: drill
+      参数: "0.2"
+    节点名称: layers
+      参数: "F.Cu" "B.Cu"
+    节点名称: net
+      参数: "65"
+    节点名称: tstamp
+      参数: "1c7c5216-beda-459b-8f8c-cc747e4a18c1"
+  节点名称: via
+    参数: "[[VIID:2]]"
+    子节点:
+    节点名称: at
+      参数: "150.126102" "111.828602"
+    节点名称: size
+      参数: "0.4"
+    节点名称: drill
+      参数: "0.2"
+    节点名称: layers
+      参数: "F.Cu" "B.Cu"
+    节点名称: net
+      参数: "65"
+    节点名称: tstamp
+      参数: "3b556494-6012-4670-90e7-c3ac9af7bdc0"
+  节点名称: via
+    参数: "[[VIID:3]]"
+    子节点:
+    节点名称: at
+      参数: "149.426102" "114.828602"
+    节点名称: size
+      参数: "0.4"
+    节点名称: drill
+      参数: "0.2"
+    节点名称: layers
+      参数: "F.Cu" "B.Cu"
+    节点名称: net
+      参数: "65"
+    节点名称: tstamp
+      参数: "561d7edf-1fb0-4057-b5a0-1ab2eac6257d"
+  节点名称: via
+    参数: "[[VIID:4]]"
+    子节点:
+    节点名称: at
+      参数: "150.226102" "114.028602"
+    节点名称: size
+      参数: "0.4"
+    节点名称: drill
+      参数: "0.2"
+    节点名称: layers
+      参数: "F.Cu" "B.Cu"
+    节点名称: net
+      参数: "65"
+    节点名称: tstamp
+      参数: "91458f30-e4ce-4daa-ac5d-4896caeaa804"
+  节点名称: segment
+    参数: "[[SEID:4]]"
+    子节点:
+    节点名称: start
+      参数: "149.426102" "114.828602"
+    节点名称: end
+      参数: "150.226102" "114.028602"
+    节点名称: width
+      参数: "0.2"
+    节点名称: layer
+      参数: "B.Cu"
+    节点名称: net
+      参数: "65"
+    节点名称: tstamp
+      参数: "939a39b2-a4d4-4d81-9ece-9dfde7c8cc72"
+  节点名称: segment
+    参数: "[[SEID:5]]"
+    子节点:
+    节点名称: start
+      参数: "150.126102" "111.828602"
+    节点名称: end
+      参数: "163.226102" "98.728601"
+    节点名称: width
+      参数: "0.2"
+    节点名称: layer
+      参数: "B.Cu"
+    节点名称: net
+      参数: "65"
+    节点名称: tstamp
+      参数: "c3e8cb0a-6d51-40a9-90e5-0c691d725116"
+  节点名称: segment
+    参数: "[[SEID:6]]"
+    子节点:
+    节点名称: start
+      参数: "163.226102" "98.728601"
+    节点名称: end
+      参数: "166.526102" "98.728601"
+    节点名称: width
+      参数: "0.2"
+    节点名称: layer
+      参数: "B.Cu"
+    节点名称: net
+      参数: "65"
+    节点名称: tstamp
+      参数: "eb5c5890-f3c6-48b1-b76b-c029ea609163"
+
+=== 扁平清单（名称 | 参数数 | 子节点数）===
+kicad_pcb | 0 | 90
+version | 1 | 0
+generator | 1 | 0
+general | 0 | 1
+thickness | 1 | 0
+paper | 1 | 0
+layers | 0 | 29
+0 | 3 | 0
+31 | 3 | 0
+32 | 3 | 0
+33 | 3 | 0
+34 | 2 | 0
+35 | 2 | 0
+36 | 3 | 0
+37 | 3 | 0
+38 | 2 | 0
+39 | 2 | 0
+40 | 3 | 0
+41 | 3 | 0
+42 | 3 | 0
+43 | 3 | 0
+44 | 2 | 0
+45 | 2 | 0
+46 | 3 | 0
+47 | 3 | 0
+48 | 2 | 0
+49 | 2 | 0
+50 | 2 | 0
+51 | 2 | 0
+52 | 2 | 0
+53 | 2 | 0
+54 | 2 | 0
+55 | 2 | 0
+56 | 2 | 0
+57 | 2 | 0
+58 | 2 | 0
+setup | 0 | 4
+pad_to_mask_clearance | 1 | 0
+aux_axis_origin | 2 | 0
+grid_origin | 2 | 0
+pcbplotparams | 0 | 32
+layerselection | 1 | 0
+plot_on_all_layers_selection | 1 | 0
+disableapertmacros | 1 | 0
+usegerberextensions | 1 | 0
+usegerberattributes | 1 | 0
+usegerberadvancedattributes | 1 | 0
+creategerberjobfile | 1 | 0
+dashed_line_dash_ratio | 1 | 0
+dashed_line_gap_ratio | 1 | 0
+svgprecision | 1 | 0
+plotframeref | 1 | 0
+viasonmask | 1 | 0
+mode | 1 | 0
+useauxorigin | 1 | 0
+hpglpennumber | 1 | 0
+hpglpenspeed | 1 | 0
+hpglpendiameter | 1 | 0
+dxfpolygonmode | 1 | 0
+dxfimperialunits | 1 | 0
+dxfusepcbnewfont | 1 | 0
+psnegative | 1 | 0
+psa4output | 1 | 0
+plotreference | 1 | 0
+plotvalue | 1 | 0
+plotinvisibletext | 1 | 0
+sketchpadsonfab | 1 | 0
+subtractmaskfromsilk | 1 | 0
+outputformat | 1 | 0
+mirror | 1 | 0
+drillshape | 1 | 0
+scaleselection | 1 | 0
+outputdirectory | 0 | 0
+net | 1 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+net | 2 | 0
+footprint | 2 | 14
+layer | 1 | 0
+tstamp | 1 | 0
+at | 2 | 0
+attr | 1 | 0
+fp_text | 2 | 4
+at | 2 | 0
+layer | 1 | 0
+effects | 0 | 2
+font | 0 | 2
+size | 2 | 0
+thickness | 1 | 0
+justify | 1 | 0
+tstamp | 1 | 0
+fp_text | 3 | 4
+at | 2 | 0
+layer | 1 | 0
+effects | 0 | 2
+font | 0 | 2
+size | 2 | 0
+thickness | 1 | 0
+justify | 1 | 0
+tstamp | 1 | 0
+fp_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+fp_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+fp_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+fp_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+fp_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+fp_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+pad | 3 | 5
+at | 2 | 0
+size | 2 | 0
+layers | 3 | 0
+net | 2 | 0
+tstamp | 1 | 0
+pad | 3 | 5
+at | 2 | 0
+size | 2 | 0
+layers | 3 | 0
+net | 2 | 0
+tstamp | 1 | 0
+footprint | 2 | 12
+layer | 1 | 0
+tstamp | 1 | 0
+at | 2 | 0
+attr | 1 | 0
+fp_text | 2 | 4
+at | 2 | 0
+layer | 1 | 0
+effects | 0 | 2
+font | 0 | 2
+size | 2 | 0
+thickness | 1 | 0
+justify | 2 | 0
+tstamp | 1 | 0
+fp_text | 3 | 4
+at | 2 | 0
+layer | 1 | 0
+effects | 0 | 2
+font | 0 | 2
+size | 2 | 0
+thickness | 1 | 0
+justify | 2 | 0
+tstamp | 1 | 0
+fp_text | 2 | 4
+at | 2 | 0
+layer | 1 | 0
+effects | 0 | 2
+font | 0 | 2
+size | 2 | 0
+thickness | 1 | 0
+justify | 2 | 0
+tstamp | 1 | 0
+fp_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+fp_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+fp_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+fp_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+pad | 3 | 5
+at | 3 | 0
+size | 2 | 0
+layers | 1 | 0
+net | 2 | 0
+tstamp | 1 | 0
+gr_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+gr_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+gr_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+gr_line | 0 | 5
+start | 2 | 0
+end | 2 | 0
+stroke | 0 | 2
+width | 1 | 0
+type | 1 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+gr_text | 1 | 4
+at | 2 | 0
+layer | 1 | 0
+tstamp | 1 | 0
+effects | 0 | 2
+font | 1 | 2
+size | 2 | 0
+thickness | 1 | 0
+justify | 2 | 0
+segment | 1 | 6
+start | 2 | 0
+end | 2 | 0
+width | 1 | 0
+layer | 1 | 0
+net | 1 | 0
+tstamp | 1 | 0
+segment | 1 | 6
+start | 2 | 0
+end | 2 | 0
+width | 1 | 0
+layer | 1 | 0
+net | 1 | 0
+tstamp | 1 | 0
+segment | 1 | 6
+start | 2 | 0
+end | 2 | 0
+width | 1 | 0
+layer | 1 | 0
+net | 1 | 0
+tstamp | 1 | 0
+via | 1 | 6
+at | 2 | 0
+size | 1 | 0
+drill | 1 | 0
+layers | 2 | 0
+net | 1 | 0
+tstamp | 1 | 0
+via | 1 | 6
+at | 2 | 0
+size | 1 | 0
+drill | 1 | 0
+layers | 2 | 0
+net | 1 | 0
+tstamp | 1 | 0
+via | 1 | 6
+at | 2 | 0
+size | 1 | 0
+drill | 1 | 0
+layers | 2 | 0
+net | 1 | 0
+tstamp | 1 | 0
+via | 1 | 6
+at | 2 | 0
+size | 1 | 0
+drill | 1 | 0
+layers | 2 | 0
+net | 1 | 0
+tstamp | 1 | 0
+segment | 1 | 6
+start | 2 | 0
+end | 2 | 0
+width | 1 | 0
+layer | 1 | 0
+net | 1 | 0
+tstamp | 1 | 0
+segment | 1 | 6
+start | 2 | 0
+end | 2 | 0
+width | 1 | 0
+layer | 1 | 0
+net | 1 | 0
+tstamp | 1 | 0
+segment | 1 | 6
+start | 2 | 0
+end | 2 | 0
+width | 1 | 0
+layer | 1 | 0
+net | 1 | 0
+tstamp | 1 | 0

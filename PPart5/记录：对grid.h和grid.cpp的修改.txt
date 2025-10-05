@@ -1,0 +1,39 @@
+
+1，grid.cpp最末尾处添加函数（避免警告）
+void Grid::MatchNets() {
+    // 暂留空壳；如需后续做网络表匹配，再填逻辑
+}
+
+
+2，grid.h：把声明改成 const（并用 const 引用接收参数）
+
+// 原来大概率是：
+int getLayerId(const std::string& name);   // 非 const
+
+// 改为：
+int getLayerId(const std::string& name) const;
+
+3，grid.cpp：定义也加上 const，函数体不用改
+
+int Grid::getLayerId(const std::string& name) const
+{
+    // 原有实现不变，例如在一个 map 里查名字 -> id
+    // return ...;
+}
+
+
+3，grid.cpp，Grid::getLayerId全部改成
+
+把实现里的 [] 替换成 find() 或 at()。两种写法任选其一。
+
+写法 A：find()
+
+int Grid::getLayerId(const std::string& layerName) const {
+    auto it = layerIDwithName.find(layerName);
+    if (it != layerIDwithName.end()) {
+        return it->second;              // ✅ 用迭代器取值，不用 []
+    } else {
+        std::cerr << "Error: Layer not found: " << layerName << "\n";
+        return -1;
+    }
+}

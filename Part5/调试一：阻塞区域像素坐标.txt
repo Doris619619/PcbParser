@@ -1,0 +1,35 @@
+解析成功！
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (102.347, 94.0456) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:SMD-EC6.3X6.3X10_18 Origin: (103.402, 115.472) Angle: 90
+Footprint: MIJI_ADPcbLib.PcbLib:DO-214AC_13 Origin: (127.014, 90.7436) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_11 Origin: (104.379, 83.8856) Angle: 0
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (139.431, 113.604) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (156.742, 94.0846) Angle: -90
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (114.793, 79.8216) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_11 Origin: (131.088, 78.8446) Angle: -90
+Footprint: MIJI_ADPcbLib.PcbLib:DO-214AC_13 Origin: (108.99, 102.936) Angle: 180
+Layer 0 实际阻塞单元格: 21
+找到阻塞区域 1: 大小=21 单元格
+Layer 0, AreaID 1 的像素数量 = 21
+(row=13, col=20) -> center(x=118.001, y=87.5036)
+(row=14, col=20) -> center(x=118.001, y=88.5036)
+(row=14, col=21) -> center(x=119.001, y=88.5036)
+(row=15, col=21) -> center(x=119.001, y=89.5036)
+(row=15, col=22) -> center(x=120.001, y=89.5036)
+(row=16, col=22) -> center(x=120.001, y=90.5036)
+(row=16, col=23) -> center(x=121.001, y=90.5036)
+(row=17, col=23) -> center(x=121.001, y=91.5036)
+(row=17, col=24) -> center(x=122.001, y=91.5036)
+(row=18, col=24) -> center(x=122.001, y=92.5036)
+(row=18, col=25) -> center(x=123.001, y=92.5036)
+(row=19, col=25) -> center(x=123.001, y=93.5036)
+(row=19, col=26) -> center(x=124.001, y=93.5036)
+(row=20, col=26) -> center(x=124.001, y=94.5036)
+(row=20, col=27) -> center(x=125.001, y=94.5036)
+(row=21, col=27) -> center(x=125.001, y=95.5036)
+(row=22, col=27) -> center(x=125.001, y=96.5036)
+(row=21, col=28) -> center(x=126.001, y=95.5036)
+(row=22, col=28) -> center(x=126.001, y=96.5036)
+(row=22, col=29) -> center(x=127.001, y=96.5036)
+(row=23, col=29) -> center(x=127.001, y=97.5036)
+示例坐标 (100.022, 91.9706) 所在像素(1-based) = (row=17, col=2)

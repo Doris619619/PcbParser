@@ -1,0 +1,44 @@
+解析成功！
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (102.347, 94.0456) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:SMD-EC6.3X6.3X10_18 Origin: (103.402, 115.472) Angle: 90
+Footprint: MIJI_ADPcbLib.PcbLib:DO-214AC_13 Origin: (127.014, 90.7436) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_11 Origin: (104.379, 83.8856) Angle: 0
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (139.431, 113.604) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (156.742, 94.0846) Angle: -90
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (114.793, 79.8216) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_11 Origin: (131.088, 78.8446) Angle: -90
+Footprint: MIJI_ADPcbLib.PcbLib:DO-214AC_13 Origin: (108.99, 102.936) Angle: 180
+Layer 0 实际阻塞单元格: 21
+找到阻塞区域 1: 大小=21 单元格
+文件: testcase.kicad_pcb
+层: 0，阻塞区域: 1，像素总数: 21
+
+Pixel( row=13, col=20 )  ->  Real(mm): (x=118.00110, y=87.50360)
+Pixel( row=14, col=20 )  ->  Real(mm): (x=118.00110, y=88.50360)
+Pixel( row=14, col=21 )  ->  Real(mm): (x=119.00110, y=88.50360)
+Pixel( row=15, col=21 )  ->  Real(mm): (x=119.00110, y=89.50360)
+Pixel( row=15, col=22 )  ->  Real(mm): (x=120.00110, y=89.50360)
+Pixel( row=16, col=22 )  ->  Real(mm): (x=120.00110, y=90.50360)
+Pixel( row=16, col=23 )  ->  Real(mm): (x=121.00110, y=90.50360)
+Pixel( row=17, col=23 )  ->  Real(mm): (x=121.00110, y=91.50360)
+Pixel( row=17, col=24 )  ->  Real(mm): (x=122.00110, y=91.50360)
+Pixel( row=18, col=24 )  ->  Real(mm): (x=122.00110, y=92.50360)
+Pixel( row=18, col=25 )  ->  Real(mm): (x=123.00110, y=92.50360)
+Pixel( row=19, col=25 )  ->  Real(mm): (x=123.00110, y=93.50360)
+Pixel( row=19, col=26 )  ->  Real(mm): (x=124.00110, y=93.50360)
+Pixel( row=20, col=26 )  ->  Real(mm): (x=124.00110, y=94.50360)
+Pixel( row=20, col=27 )  ->  Real(mm): (x=125.00110, y=94.50360)
+Pixel( row=21, col=27 )  ->  Real(mm): (x=125.00110, y=95.50360)
+Pixel( row=22, col=27 )  ->  Real(mm): (x=125.00110, y=96.50360)
+Pixel( row=21, col=28 )  ->  Real(mm): (x=126.00110, y=95.50360)
+Pixel( row=22, col=28 )  ->  Real(mm): (x=126.00110, y=96.50360)
+Pixel( row=22, col=29 )  ->  Real(mm): (x=127.00110, y=96.50360)
+Pixel( row=23, col=29 )  ->  Real(mm): (x=127.00110, y=97.50360)
+Layer 0 实际阻塞单元格: 21
+找到阻塞区域 1: 大小=21 单元格
+
+BBox corners (LB, RB, RT, LT) 1-based:
+LB: (row=23, col=20)
+RB: (row=23, col=29)
+RT: (row=13, col=29)
+LT: (row=13, col=20)

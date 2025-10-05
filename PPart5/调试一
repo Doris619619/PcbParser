@@ -1,0 +1,48 @@
+
+//调试一：阻塞区域像素坐标。输入layer0，区域编号1
+int main(int argc, char** argv)
+{
+    try {
+        std::string filename = (argc >= 2) ? argv[1] : "testcase.kicad_pcb";
+
+        Grid grid;
+        // 如需修改 inputScale，请在 SetUp 之前调用：
+        // grid.setInputScale(1);  // 例如：1 像素 = 1 mm
+        grid.SetUp(filename);
+
+        int layer = 0;
+        int areaID = 1;
+
+        auto items = CollectBlockedPixelsWithReal(grid, layer, areaID);
+
+        if (items.empty()) {
+            std::cout << "[提示] 未找到层 " << layer << " 的阻塞区域 " << areaID << " 或该区域为空。\n";
+            return 0;
+        }
+
+        std::cout << "文件: " << filename << "\n"
+            << "层: " << layer << "，阻塞区域: " << areaID
+            << "，像素总数: " << items.size() << "\n\n";
+
+        std::cout << std::fixed << std::setprecision(5);
+        for (const auto& bp : items) {
+            std::cout << "Pixel( row=" << bp.row1 << ", col=" << bp.col1 << " )  ->  "
+                << "Real(mm): (x=" << bp.x_mm << ", y=" << bp.y_mm << ")\n";
+        }
+
+        // （可选）打印包围盒四角
+        auto corners = GetBlockedAreaBBoxCorners_1Based(grid, layer, areaID);
+        std::cout << "\nBBox corners (LB, RB, RT, LT) 1-based:\n";
+        const char* names[4] = { "LB","RB","RT","LT" };
+        for (int i = 0; i < 4; i++) {
+            std::cout << names[i] << ": (row=" << corners[i].first
+                << ", col=" << corners[i].second << ")\n";
+        }
+
+    }
+    catch (const std::exception& ex) {
+        std::cerr << "[错误] " << ex.what() << "\n";
+        return 1;
+    }
+    return 0;
+}

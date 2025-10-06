@@ -46,3 +46,62 @@ int main(int argc, char** argv)
     }
     return 0;
 }
+
+
+
+//调试二：
+int main()
+{
+    try {
+        std::string pcb = "testcase.kicad_pcb"; // 或 "L92.txt" / "A30.txt"
+        int layer = 1;
+        int areaID = 1;
+        int m_expand = 4;              // 你可以改
+
+        Grid grid;
+        grid.SetUp(pcb);                  // 按你的工程读取 inputScale 等
+
+        auto pxs = GetBlockedAreaPixels_1Based(grid, layer, areaID);
+        if (pxs.empty()) {
+            std::cout << "未找到该阻塞区域。\n";
+            return 0;
+        }
+
+        auto bbox = ComputeBBoxFromPixels1(pxs);
+
+        ClipReport rep;
+        auto ebbox = ExpandBBoxByMPixelsCompensated(bbox, m_expand, grid, &rep);
+
+        // 像素四角（LB,RB,RT,LT）
+        auto pxCorners = BBoxCorners_LB_RB_RT_LT(ebbox);
+        std::cout << "[像素边框四角] (LB, RB, RT, LT):\n";
+        std::cout << "  LB = (" << pxCorners[0].first << "," << pxCorners[0].second << ")\n";
+        std::cout << "  RB = (" << pxCorners[1].first << "," << pxCorners[1].second << ")\n";
+        std::cout << "  RT = (" << pxCorners[2].first << "," << pxCorners[2].second << ")\n";
+        std::cout << "  LT = (" << pxCorners[3].first << "," << pxCorners[3].second << ")\n";
+
+        // 现实四角（LT, LB, RT, RB）
+        auto realCorners = RealCorners_LT_LB_RT_RB(grid, ebbox);
+        std::cout << std::fixed << std::setprecision(5);
+        std::cout << "\n[现实边框四角(mm)] (LT, LB, RT, RB):\n";
+        std::cout << "  LT = (" << realCorners[0].first << ", " << realCorners[0].second << ")\n";
+        std::cout << "  LB = (" << realCorners[1].first << ", " << realCorners[1].second << ")\n";
+        std::cout << "  RT = (" << realCorners[2].first << ", " << realCorners[2].second << ")\n";
+        std::cout << "  RB = (" << realCorners[3].first << ", " << realCorners[3].second << ")\n";
+
+        // 打印是否贴边与补偿信息
+        std::cout << "\n[边界剪裁/补偿报告]\n";
+        if (rep.left)   std::cout << "  左侧贴边，缺 " << rep.left_deficit_px << " px，已补到右侧\n";
+        if (rep.right)  std::cout << "  右侧贴边，缺 " << rep.right_deficit_px << " px，已补到左侧\n";
+        if (rep.top)    std::cout << "  上侧贴边，缺 " << rep.top_deficit_px << " px，已补到下侧\n";
+        if (rep.bottom) std::cout << "  下侧贴边，缺 " << rep.bottom_deficit_px << " px，已补到上侧\n";
+        if (!rep.left && !rep.right && !rep.top && !rep.bottom)
+            std::cout << "  未触碰 PCB 边界，无需补偿。\n";
+
+    }
+    catch (const std::exception& e) {
+        std::cerr << "[Separate2] Error: " << e.what() << "\n";
+        return 1;
+    }
+    return 0;
+}

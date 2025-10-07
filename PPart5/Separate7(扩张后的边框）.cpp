@@ -556,12 +556,17 @@ FindIntersectionsAndEndpointsInSmallPCB(const Grid& grid, int layerId, int block
 }
 
 
-// ========== 扩张四个顶点 ==========
+// ========== 获取扩张后的小PCB顶点 ==========
 static std::vector<std::pair<double, double>>
-ExpandCornersByOffset(const std::vector<std::pair<double, double>>& originalCorners, double offsetMM)
+GetExpandedPCBCornersWithOffset(const Grid& grid, int layer, int blockedAreaID,
+    int expandPixels = 5, double cornerOffsetMM = 3.3)
 {
+    // 1. 获取原始小PCB边界框
+    auto originalCorners = GetExpandedPCBRealCorners(grid, layer, blockedAreaID, expandPixels);
+
+    // 2. 扩张顶点
     if (originalCorners.size() != 4) {
-        throw std::runtime_error("扩张顶点函数需要4个输入点");
+        throw std::runtime_error("获取小PCB边界框失败，未返回4个顶点");
     }
 
     std::vector<std::pair<double, double>> expandedCorners;
@@ -591,8 +596,8 @@ ExpandCornersByOffset(const std::vector<std::pair<double, double>>& originalCorn
             dy /= length;
 
             // 沿着方向向量移动offset距离
-            double new_x = corner.first + dx * offsetMM;
-            double new_y = corner.second + dy * offsetMM;
+            double new_x = corner.first + dx * cornerOffsetMM;
+            double new_y = corner.second + dy * cornerOffsetMM;
 
             expandedCorners.emplace_back(new_x, new_y);
         }
@@ -624,7 +629,7 @@ int main() {
             << "), 阻塞区域=" << blockedAreaId << ", 扩展=" << expandPixels << "像素"
             << ", 顶点扩张=" << cornerOffset << "mm" << std::endl;
 
-        // 3. 获取小PCB边界框
+        // 3. 获取原始小PCB边界框
         auto corners = GetExpandedPCBRealCorners(grid, layerId, blockedAreaId, expandPixels);
 
         // 设置高精度输出
@@ -635,22 +640,18 @@ int main() {
             std::cout << cornerNames[i] << ": (" << corners[i].first << ", " << corners[i].second << ")" << std::endl;
         }
 
-        // 4. 扩张顶点
-        auto expandedCorners = ExpandCornersByOffset(corners, cornerOffset);
+        // 4. 获取扩张后的小PCB顶点
+        auto expandedCorners = GetExpandedPCBCornersWithOffset(grid, layerId, blockedAreaId, expandPixels, cornerOffset);
 
         std::cout << "\n=== 扩张后的小PCB边界框 ===" << std::endl;
         for (size_t i = 0; i < expandedCorners.size(); ++i) {
             std::cout << cornerNames[i] << ": (" << expandedCorners[i].first << ", " << expandedCorners[i].second << ")" << std::endl;
         }
 
-        // 5. 将扩张后的顶点存储到vector中
-        std::vector<std::pair<double, double>> finalExpandedCorners = expandedCorners;
-        std::cout << "\n扩张后的顶点已存储到finalExpandedCorners vector中，大小: " << finalExpandedCorners.size() << std::endl;
-
-        // 6. 查找交点和终止点（使用原始边界框）
+        // 5. 查找交点和终止点
         auto points = FindIntersectionsAndEndpointsInSmallPCB(grid, layerId, blockedAreaId, expandPixels);
 
-        // 7. 输出最终结果
+        // 6. 输出最终结果
         std::cout << "\n=== 线段交点和终止点 ===" << std::endl;
         std::cout << "共找到 " << points.size() << " 个点:" << std::endl;
         for (size_t i = 0; i < points.size(); ++i) {

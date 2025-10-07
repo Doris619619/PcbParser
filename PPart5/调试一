@@ -232,3 +232,154 @@ int main() {
     std::cout << "\n程序执行完成!" << std::endl;
     return 0;
 }
+
+
+
+//调试五:输出最终点
+// ========== 主函数 ==========
+int main() {
+    try {
+        // 1. 初始化Grid，读取PCB文件
+        Grid grid;
+        std::string filename = "testcase.kicad_pcb";  // 请替换为实际文件路径
+        std::cout << "正在读取PCB文件: " << filename << std::endl;
+        grid.SetUp(filename);
+
+        std::cout << "Grid初始化成功!" << std::endl;
+        std::cout << "网格尺寸: " << grid.width << " x " << grid.height << std::endl;
+        std::cout << "层数: " << grid.Layers << std::endl;
+        std::cout << "输入比例: " << grid.inputScale << std::endl;
+        std::cout << "坐标范围: x[" << grid.min_x << ", " << grid.max_x << "], y[" << grid.min_y << ", " << grid.max_y << "]" << std::endl;
+
+        // 2. 显示可用的层信息
+        std::cout << "\n=== 可用层信息 ===" << std::endl;
+        for (int i = 0; i < grid.layerName.size(); ++i) {
+            std::cout << "层 " << i << ": " << grid.layerName[i] << std::endl;
+        }
+
+        // 3. 分析每层的阻塞区域
+        std::cout << "\n=== 各层阻塞区域分析 ===" << std::endl;
+        for (int layer = 0; layer < grid.Layers; ++layer) {
+            try {
+                LayerBlockedAnalysis la = BlockedAreaAnalyzer::analyzeLayerBlockedAreas(grid, layer);
+                std::cout << "层 " << layer << " (" << getLayerNameById(grid, layer)
+                    << "): 找到 " << la.blockedAreas.size() << " 个阻塞区域" << std::endl;
+
+                for (const auto& area : la.blockedAreas) {
+                    std::cout << "  阻塞区域ID: " << area.areaID
+                        << ", 像素数: " << area.cells.size() << std::endl;
+                }
+            }
+            catch (const std::exception& e) {
+                std::cout << "层 " << layer << " 分析失败: " << e.what() << std::endl;
+            }
+        }
+
+        // 4. 测试获取扩展后小PCB的角点坐标
+        std::cout << "\n=== 测试获取扩展后小PCB角点坐标 ===" << std::endl;
+
+        // 选择测试参数（可以根据上面的分析结果调整）
+        int testLayer = 1;          // 测试层号
+        int testBlockedAreaID = 1;  // 测试阻塞区域ID
+        int expandPixels = 4;       // 扩展像素数
+
+        std::cout << "测试参数: 层=" << testLayer
+            << "(" << getLayerNameById(grid, testLayer) << ")"
+            << ", 阻塞区域ID=" << testBlockedAreaID
+            << ", 扩展像素=" << expandPixels << std::endl;
+
+        // 获取阻塞区域像素
+        auto blockedPixels = GetBlockedAreaPixels_1Based(grid, testLayer, testBlockedAreaID);
+        if (blockedPixels.empty()) {
+            std::cout << "警告: 未找到阻塞区域 " << testBlockedAreaID << "，将尝试其他区域..." << std::endl;
+
+            // 尝试第一个可用的阻塞区域
+            LayerBlockedAnalysis la = BlockedAreaAnalyzer::analyzeLayerBlockedAreas(grid, testLayer);
+            if (!la.blockedAreas.empty()) {
+                testBlockedAreaID = la.blockedAreas[0].areaID;
+                blockedPixels = GetBlockedAreaPixels_1Based(grid, testLayer, testBlockedAreaID);
+                std::cout << "改为使用阻塞区域ID: " << testBlockedAreaID << std::endl;
+            }
+        }
+
+        if (!blockedPixels.empty()) {
+            std::cout << "找到阻塞区域像素数: " << blockedPixels.size() << std::endl;
+
+            // 计算原始包围盒
+            BBoxPx1 originalBBox = ComputeBBoxFromPixels1(blockedPixels);
+            std::cout << "原始包围盒: 行[" << originalBBox.row_min << "-" << originalBBox.row_max
+                << "], 列[" << originalBBox.col_min << "-" << originalBBox.col_max << "]" << std::endl;
+
+            // 获取扩展后的小PCB角点坐标
+            auto corners = GetExpandedPCBRealCorners(grid, testLayer, testBlockedAreaID, expandPixels);
+
+            // 输出结果
+            std::cout << "\n=== 扩展后小PCB的四个角点坐标 ===" << std::endl;
+            std::cout << std::fixed << std::setprecision(6);
+            std::vector<std::string> cornerNames = { "左上(LT)", "右上(RT)", "右下(RB)", "左下(LB)" };
+
+            for (size_t i = 0; i < corners.size(); ++i) {
+                std::cout << cornerNames[i] << ": ("
+                    << corners[i].first << " mm, "
+                    << corners[i].second << " mm)" << std::endl;
+            }
+
+            // 5. 将角点坐标存储到vector中
+            std::vector<std::pair<double, double>> pcbCorners = corners;
+            std::cout << "\n角点坐标已存储到vector中，大小: " << pcbCorners.size() << std::endl;
+
+            // 6. 创建对应的RealRectMM
+            RealRectMM pcbBox;
+            pcbBox.x_left = corners[0].first;   // 左上x
+            pcbBox.y_top = corners[0].second;   // 左上y  
+            pcbBox.x_right = corners[1].first;  // 右上x
+            pcbBox.y_bot = corners[2].second;   // 右下y
+
+            std::cout << "\n=== 小PCB边界框 ===" << std::endl;
+            std::cout << "左边界 x_left: " << pcbBox.x_left << " mm" << std::endl;
+            std::cout << "上边界 y_top: " << pcbBox.y_top << " mm" << std::endl;
+            std::cout << "右边界 x_right: " << pcbBox.x_right << " mm" << std::endl;
+            std::cout << "下边界 y_bot: " << pcbBox.y_bot << " mm" << std::endl;
+
+            // 7. 将边界框存储到vector中
+            std::vector<double> pcbBounds;
+            pcbBounds.reserve(4);
+            pcbBounds.push_back(pcbBox.x_left);
+            pcbBounds.push_back(pcbBox.y_top);
+            pcbBounds.push_back(pcbBox.x_right);
+            pcbBounds.push_back(pcbBox.y_bot);
+
+            std::cout << "\n边界框已存储到vector中，大小: " << pcbBounds.size() << std::endl;
+            std::vector<std::string> boundNames = { "左边界", "上边界", "右边界", "下边界" };
+            for (size_t i = 0; i < pcbBounds.size(); ++i) {
+                std::cout << boundNames[i] << ": " << pcbBounds[i] << " mm" << std::endl;
+            }
+
+            // 8. 查找小PCB内的所有交点和终止点
+            std::cout << "\n=== 开始查找小PCB内的交点和终止点 ===" << std::endl;
+            auto intersectionPoints = FindIntersectionsAndEndpointsInSmallPCB(grid, testLayer, testBlockedAreaID, expandPixels);
+
+            std::cout << "\n=== 最终结果汇总 ===" << std::endl;
+            std::cout << "共找到 " << intersectionPoints.size() << " 个点:" << std::endl;
+            for (size_t i = 0; i < intersectionPoints.size(); ++i) {
+                std::cout << "点 " << i + 1 << ": (" << intersectionPoints[i].first
+                    << ", " << intersectionPoints[i].second << ")" << std::endl;
+            }
+
+            // 9. 可选：将交点坐标保存到文件或其他处理
+            std::cout << "\n所有处理完成!" << std::endl;
+
+        }
+        else {
+            std::cout << "错误: 在层 " << testLayer << " 上未找到任何阻塞区域" << std::endl;
+        }
+
+    }
+    catch (const std::exception& e) {
+        std::cerr << "程序运行出错: " << e.what() << std::endl;
+        return 1;
+    }
+
+    std::cout << "\n程序执行完成!" << std::endl;
+    return 0;
+}

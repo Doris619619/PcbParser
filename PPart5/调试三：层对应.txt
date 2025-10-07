@@ -1,0 +1,40 @@
+解析成功！
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (102.347, 94.0456) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:SMD-EC6.3X6.3X10_18 Origin: (103.402, 115.472) Angle: 90
+Footprint: MIJI_ADPcbLib.PcbLib:DO-214AC_13 Origin: (127.014, 90.7436) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_11 Origin: (104.379, 83.8856) Angle: 0
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (139.431, 113.604) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (156.742, 94.0846) Angle: -90
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (114.793, 79.8216) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_11 Origin: (131.088, 78.8446) Angle: -90
+Footprint: MIJI_ADPcbLib.PcbLib:DO-214AC_13 Origin: (108.99, 102.936) Angle: 180
+层编号和层名称对应关系：
+层编号 0 -> F.Cu
+层编号 1 -> B.Cu
+层编号 2 -> B.Adhes
+层编号 3 -> F.Adhes
+层编号 4 -> B.Paste
+层编号 5 -> F.Paste
+层编号 6 -> B.SilkS
+层编号 7 -> F.SilkS
+层编号 8 -> B.Mask
+层编号 9 -> F.Mask
+层编号 10 -> Dwgs.User
+层编号 11 -> Cmts.User
+层编号 12 -> Eco1.User
+层编号 13 -> Eco2.User
+层编号 14 -> Edge.Cuts
+层编号 15 -> Margin
+层编号 16 -> B.CrtYd
+层编号 17 -> F.CrtYd
+层编号 18 -> B.Fab
+层编号 19 -> F.Fab
+层编号 20 -> User.1
+层编号 21 -> User.2
+层编号 22 -> User.3
+层编号 23 -> User.4
+层编号 24 -> User.5
+层编号 25 -> User.6
+层编号 26 -> User.7
+层编号 27 -> User.8
+层编号 28 -> User.9

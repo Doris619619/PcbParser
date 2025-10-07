@@ -1,0 +1,141 @@
+//调试四：
+正在读取PCB文件: testcase.kicad_pcb
+解析成功！
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (102.347, 94.0456) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:SMD-EC6.3X6.3X10_18 Origin: (103.402, 115.472) Angle: 90
+Footprint: MIJI_ADPcbLib.PcbLib:DO-214AC_13 Origin: (127.014, 90.7436) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_11 Origin: (104.379, 83.8856) Angle: 0
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (139.431, 113.604) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (156.742, 94.0846) Angle: -90
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_30 Origin: (114.793, 79.8216) Angle: 180
+Footprint: MIJI_ADPcbLib.PcbLib:CDRH6D38-3D_11 Origin: (131.088, 78.8446) Angle: -90
+Footprint: MIJI_ADPcbLib.PcbLib:DO-214AC_13 Origin: (108.99, 102.936) Angle: 180
+Grid初始化成功!
+网格尺寸: 62 x 45
+层数: 29
+输入比例: 1
+坐标范围: x[98.5011, 160.501], y[75.0036, 120.004]
+
+=== 可用层信息 ===
+层 0: F.Cu
+层 1: B.Cu
+层 2: B.Adhes
+层 3: F.Adhes
+层 4: B.Paste
+层 5: F.Paste
+层 6: B.SilkS
+层 7: F.SilkS
+层 8: B.Mask
+层 9: F.Mask
+层 10: Dwgs.User
+层 11: Cmts.User
+层 12: Eco1.User
+层 13: Eco2.User
+层 14: Edge.Cuts
+层 15: Margin
+层 16: B.CrtYd
+层 17: F.CrtYd
+层 18: B.Fab
+层 19: F.Fab
+层 20: User.1
+层 21: User.2
+层 22: User.3
+层 23: User.4
+层 24: User.5
+层 25: User.6
+层 26: User.7
+层 27: User.8
+层 28: User.9
+
+=== 各层阻塞区域分析 ===
+Layer 0 实际阻塞单元格: 21
+找到阻塞区域 1: 大小=21 单元格
+层 0 (F.Cu): 找到 1 个阻塞区域
+  阻塞区域ID: 1, 像素数: 21
+Layer 1 实际阻塞单元格: 36
+找到阻塞区域 1: 大小=12 单元格
+找到阻塞区域 2: 大小=24 单元格
+层 1 (B.Cu): 找到 2 个阻塞区域
+  阻塞区域ID: 1, 像素数: 12
+  阻塞区域ID: 2, 像素数: 24
+Layer 2 实际阻塞单元格: 0
+层 2 (B.Adhes): 找到 0 个阻塞区域
+Layer 3 实际阻塞单元格: 0
+层 3 (F.Adhes): 找到 0 个阻塞区域
+Layer 4 实际阻塞单元格: 0
+层 4 (B.Paste): 找到 0 个阻塞区域
+Layer 5 实际阻塞单元格: 0
+层 5 (F.Paste): 找到 0 个阻塞区域
+Layer 6 实际阻塞单元格: 0
+层 6 (B.SilkS): 找到 0 个阻塞区域
+Layer 7 实际阻塞单元格: 0
+层 7 (F.SilkS): 找到 0 个阻塞区域
+Layer 8 实际阻塞单元格: 0
+层 8 (B.Mask): 找到 0 个阻塞区域
+Layer 9 实际阻塞单元格: 0
+层 9 (F.Mask): 找到 0 个阻塞区域
+Layer 10 实际阻塞单元格: 0
+层 10 (Dwgs.User): 找到 0 个阻塞区域
+Layer 11 实际阻塞单元格: 0
+层 11 (Cmts.User): 找到 0 个阻塞区域
+Layer 12 实际阻塞单元格: 0
+层 12 (Eco1.User): 找到 0 个阻塞区域
+Layer 13 实际阻塞单元格: 0
+层 13 (Eco2.User): 找到 0 个阻塞区域
+Layer 14 实际阻塞单元格: 0
+层 14 (Edge.Cuts): 找到 0 个阻塞区域
+Layer 15 实际阻塞单元格: 0
+层 15 (Margin): 找到 0 个阻塞区域
+Layer 16 实际阻塞单元格: 0
+层 16 (B.CrtYd): 找到 0 个阻塞区域
+Layer 17 实际阻塞单元格: 0
+层 17 (F.CrtYd): 找到 0 个阻塞区域
+Layer 18 实际阻塞单元格: 0
+层 18 (B.Fab): 找到 0 个阻塞区域
+Layer 19 实际阻塞单元格: 0
+层 19 (F.Fab): 找到 0 个阻塞区域
+Layer 20 实际阻塞单元格: 0
+层 20 (User.1): 找到 0 个阻塞区域
+Layer 21 实际阻塞单元格: 0
+层 21 (User.2): 找到 0 个阻塞区域
+Layer 22 实际阻塞单元格: 0
+层 22 (User.3): 找到 0 个阻塞区域
+Layer 23 实际阻塞单元格: 0
+层 23 (User.4): 找到 0 个阻塞区域
+Layer 24 实际阻塞单元格: 0
+层 24 (User.5): 找到 0 个阻塞区域
+Layer 25 实际阻塞单元格: 0
+层 25 (User.6): 找到 0 个阻塞区域
+Layer 26 实际阻塞单元格: 0
+层 26 (User.7): 找到 0 个阻塞区域
+Layer 27 实际阻塞单元格: 0
+层 27 (User.8): 找到 0 个阻塞区域
+Layer 28 实际阻塞单元格: 0
+层 28 (User.9): 找到 0 个阻塞区域
+
+=== 测试获取扩展后小PCB角点坐标 ===
+测试参数: 层=1(B.Cu), 阻塞区域ID=1, 扩展像素=4
+Layer 1 实际阻塞单元格: 36
+找到阻塞区域 1: 大小=12 单元格
+找到阻塞区域 2: 大小=24 单元格
+找到阻塞区域像素数: 12
+原始包围盒: 行[10-21], 列[1-1]
+Layer 1 实际阻塞单元格: 36
+找到阻塞区域 1: 大小=12 单元格
+找到阻塞区域 2: 大小=24 单元格
+
+=== 扩展后小PCB的四个角点坐标 ===
+左上(LT): (98.501099 mm, 80.003598 mm)
+右上(RT): (107.501099 mm, 80.003598 mm)
+右下(RB): (107.501099 mm, 100.003598 mm)
+左下(LB): (98.501099 mm, 100.003598 mm)
+
+角点坐标已存储到vector中，大小: 4
+
+=== 小PCB边界框 ===
+左边界 x_left: 98.501099 mm
+上边界 y_top: 80.003598 mm
+右边界 x_right: 107.501099 mm
+下边界 y_bot: 100.003598 mm
+
+程序执行完成!

@@ -432,3 +432,68 @@ int main() {
     std::cout << "程序执行完成!" << std::endl;
     return 0;
 }
+
+
+//调试八：扩张后的边框坐标
+// ========== 修正精度的简约主函数 ==========
+int main() {
+    try {
+        // 1. 初始化Grid
+        Grid grid;
+        std::string filename = "testcase.kicad_pcb";
+        grid.SetUp(filename);
+        std::cout << "Grid初始化成功! 网格尺寸: " << grid.width << " x " << grid.height << std::endl;
+
+        // 2. 设置参数
+        int layerId = 1;           // 层序号
+        int blockedAreaId = 2;     // 阻塞区域编号
+        int expandPixels = 3;      // 扩展像素数
+        double cornerOffset = 3.3; // 顶点扩张距离(mm)
+
+        std::cout << "参数: 层=" << layerId << "(" << getLayerNameById(grid, layerId)
+            << "), 阻塞区域=" << blockedAreaId << ", 扩展=" << expandPixels << "像素"
+            << ", 顶点扩张=" << cornerOffset << "mm" << std::endl;
+
+        // 3. 获取小PCB边界框
+        auto corners = GetExpandedPCBRealCorners(grid, layerId, blockedAreaId, expandPixels);
+
+        // 设置高精度输出
+        std::cout << std::fixed << std::setprecision(5);
+        std::cout << "\n=== 原始小PCB边界框 ===" << std::endl;
+        std::vector<std::string> cornerNames = { "左上(LT)", "右上(RT)", "右下(RB)", "左下(LB)" };
+        for (size_t i = 0; i < corners.size(); ++i) {
+            std::cout << cornerNames[i] << ": (" << corners[i].first << ", " << corners[i].second << ")" << std::endl;
+        }
+
+        // 4. 扩张顶点
+        auto expandedCorners = ExpandCornersByOffset(corners, cornerOffset);
+
+        std::cout << "\n=== 扩张后的小PCB边界框 ===" << std::endl;
+        for (size_t i = 0; i < expandedCorners.size(); ++i) {
+            std::cout << cornerNames[i] << ": (" << expandedCorners[i].first << ", " << expandedCorners[i].second << ")" << std::endl;
+        }
+
+        // 5. 将扩张后的顶点存储到vector中
+        std::vector<std::pair<double, double>> finalExpandedCorners = expandedCorners;
+        std::cout << "\n扩张后的顶点已存储到finalExpandedCorners vector中，大小: " << finalExpandedCorners.size() << std::endl;
+
+        // 6. 查找交点和终止点（使用原始边界框）
+        auto points = FindIntersectionsAndEndpointsInSmallPCB(grid, layerId, blockedAreaId, expandPixels);
+
+        // 7. 输出最终结果
+        std::cout << "\n=== 线段交点和终止点 ===" << std::endl;
+        std::cout << "共找到 " << points.size() << " 个点:" << std::endl;
+        for (size_t i = 0; i < points.size(); ++i) {
+            std::cout << "点 " << i + 1 << ": (" << points[i].x << ", " << points[i].y
+                << "), 网络: " << points[i].net << std::endl;
+        }
+
+    }
+    catch (const std::exception& e) {
+        std::cerr << "程序运行出错: " << e.what() << std::endl;
+        return 1;
+    }
+
+    std::cout << "程序执行完成!" << std::endl;
+    return 0;
+}

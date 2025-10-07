@@ -322,3 +322,50 @@ int main() {
 
     return 0;
 }
+
+
+
+
+//调试六：点+net
+// ========== 简约主函数 ==========
+int main() {
+    try {
+        // 1. 初始化Grid
+        Grid grid;
+        std::string filename = "testcase.kicad_pcb";
+        grid.SetUp(filename);
+        std::cout << "Grid初始化成功! 网格尺寸: " << grid.width << " x " << grid.height << std::endl;
+
+        // 2. 设置参数
+        int layerId = 1;           // 层序号
+        int blockedAreaId = 1;     // 阻塞区域编号
+        int expandPixels = 4;      // 扩展像素数
+
+        std::cout << "参数: 层=" << layerId << "(" << getLayerNameById(grid, layerId)
+            << "), 阻塞区域=" << blockedAreaId << ", 扩展=" << expandPixels << "像素" << std::endl;
+
+        // 3. 获取小PCB边界框
+        auto corners = GetExpandedPCBRealCorners(grid, layerId, blockedAreaId, expandPixels);
+        std::cout << "小PCB边界框: 左=" << corners[0].first << ", 上=" << corners[0].second
+            << ", 右=" << corners[1].first << ", 下=" << corners[2].second << std::endl;
+
+        // 4. 查找交点和终止点
+        auto points = FindIntersectionsAndEndpointsInSmallPCB(grid, layerId, blockedAreaId, expandPixels);
+
+        // 5. 输出最终结果
+        std::cout << "\n=== 最终结果 ===" << std::endl;
+        std::cout << "共找到 " << points.size() << " 个点:" << std::endl;
+        for (size_t i = 0; i < points.size(); ++i) {
+            std::cout << "点 " << i + 1 << ": (" << points[i].x << ", " << points[i].y
+                << "), 网络: " << points[i].net << std::endl;
+        }
+
+    }
+    catch (const std::exception& e) {
+        std::cerr << "程序运行出错: " << e.what() << std::endl;
+        return 1;
+    }
+
+    std::cout << "程序执行完成!" << std::endl;
+    return 0;
+}

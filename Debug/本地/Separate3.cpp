@@ -1,4 +1,4 @@
-
+﻿
 // 坐标约定：像素 1-based，左上为(1,1)，行向下增大、列向右增大。
 // 现实坐标：mm，y 向下增大（与屏幕一致）
 
@@ -2560,7 +2560,7 @@ int main() {
                     }
 
 
-                    #if 0
+#if 0
                     // 路径聚类（按端点共享 + 层内）
                     std::vector<std::vector<int>> adj;
                     buildAdjacencyBySharedEndpoints(seg5, mp.coordTol, adj);
@@ -2595,7 +2595,7 @@ int main() {
                             }
                         }
                     }
-                    #endif
+#endif
 
 
 
